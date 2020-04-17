@@ -15,6 +15,7 @@ class CreateCrimeinfosTable extends Migration
     {
         Schema::create('crimeinfos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            //$table->string('Username');
             $table->string('title');
             $table->string('place',550);
             $table->string('post');

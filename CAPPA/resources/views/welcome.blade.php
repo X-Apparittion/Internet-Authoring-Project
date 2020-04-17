@@ -13,6 +13,17 @@
             </div>
     </div>
 
+    <div class="container-large uk-hidden@s">
+            <div class="">
+                    <p> WELCOME TO CAPPA</p>
+                    <p>
+                        Crime and Prevention and Predictive Analysis Application C.A.P.P.A.A
+                    </p>
+                    <a class="uk-button uk-button-default welcome-btn" href="/CrimePost">VIEW POST</a>
+            </div>
+    </div>
+
+
     <div class="uk-section uk-section-muted footer-background">
             <div class="uk-container">
 
@@ -39,7 +50,6 @@
         </footer>
         
     </div>
-
 
    </div>
 @endsection

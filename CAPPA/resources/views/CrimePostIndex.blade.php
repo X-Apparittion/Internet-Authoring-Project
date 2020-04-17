@@ -38,7 +38,7 @@
                         <p class="txt"> {{ $CrimePost->post }} At the location of {{$CrimePost->place}}</p>
 
                         <p uk-margin>
-                            <a class="uk-button uk-button-default btn" href="/CrimePost/{{$CrimePost->id}}" >EDIT</a>
+                            <a class="uk-button uk-button-default btn" href="/CrimePost/{{$CrimePost->id}}" >View</a>
                         </p>
 
                     </div>

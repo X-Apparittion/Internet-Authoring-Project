@@ -25,19 +25,18 @@
 </head>
 <body>
   
-<nav class="uk-navbar-container" id="NAV_BG" uk-navbar>
+<nav class="uk-navbar-container uk-visible@l" id="NAV_BG" uk-navbar>
 
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                <li>
                    <a class="" href="{{ url('/') }}">
-                       <img src="/img/logo.png" width="150px" alt="CAPPA_LOGO">
+                       <img src="/img/logo.png" width="175px" alt="CAPPA_LOGO">
                     </a>
                 </li>
             </ul>
 
         </div>
-
         <div class="uk-navbar-right">
 
             <ul class="uk-navbar-nav">
@@ -73,6 +72,15 @@
             </ul>
         </div>
 </nav>
-   @yield('content')         
+
+<nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@s">
+    <div class="uk-navbar-left">
+        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"></a>
+    </div>
+</nav>
+
+    <div>
+    @yield('content')    
+    </div>
 </body>
 </html>

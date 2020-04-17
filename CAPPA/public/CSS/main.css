@@ -30,6 +30,10 @@
     background: linear-gradient(#43cea2, #34495e);
 }
 
+#bg3 {
+    background: linear-gradient(#ffffff, #abbaab);
+}
+
 .btn {
     border-radius: 8px;
     border: none;
@@ -108,8 +112,8 @@
 }
 
 .section {
-    margin: 4rem;
-    padding: 4rem;
+    margin: 3rem;
+    padding: 3rem;
 }
 
 .footer-background {
@@ -211,4 +215,47 @@
 
 .loginpanel {
     padding: 6rem;
+}
+
+.box3 {
+    background-color: #f1f2f6;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 4px 8px#2980B9;
+}
+
+.container2 {
+    margin-top: 2rem;
+    margin-left: 22rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.boxsection {
+    margin: 3rem 0 1rem 0;
+}
+
+.loginpanel2 {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn-4 {
+    border-radius: 8px;
+    border: none;
+    padding: 0.6rem;
+    background-color: #686de0;
+    color: white;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+.conbox {
+    margin: 2rem;
+}
+
+.card1 {
+    border-radius: 6rem;
 }

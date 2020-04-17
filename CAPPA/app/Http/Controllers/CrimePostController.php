@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Crimeinfo;
 
+
 class CrimePostController extends Controller
 {
    public function CrimePostIndex (){
@@ -18,14 +19,17 @@ class CrimePostController extends Controller
 
    public function ShowPostByID ($id){
 
-            $CrimePosts = Crimeinfo::findOrFail($id);
+      $CrimePosts = Crimeinfo::findOrFail($id);
 
        return view('ShowIDByPost',[
          'CrimePosts' => $CrimePosts
-      ]);
+       ]);
    }
 
   public function CreateCrimePost(){
+
+     $CrimePosts = Crimeinfo::all();
+     
      return view('CreatePost');
   }
 
@@ -36,7 +40,7 @@ class CrimePostController extends Controller
       $record->title = request('title');
       $record->place = request('place');
       $record->post  = request('post');
-
+   
       $record->save();
 
      return redirect('/CrimePost')->with('msg','Posts updated.');
