@@ -14,12 +14,16 @@
     </div>
 
     <div class="container-large uk-hidden@s">
-            <div class="">
-                    <p> WELCOME TO CAPPA</p>
-                    <p>
+            <div class="wel-panel">
+                    <p id="wel-msg-mobile">WELCOME</p>
+                    <p id="wel-msg-mobile2">TO</p>
+                    <p id="wel-msg-mobile3">CAPPA</p>
+                    <p id="wel-msg-mobile4">
                         Crime and Prevention and Predictive Analysis Application C.A.P.P.A.A
                     </p>
-                    <a class="uk-button uk-button-default welcome-btn" href="/CrimePost">VIEW POST</a>
+                    <br>
+                    <a class="uk-button uk-button-default  welcome-btn-mobile" href="/CrimePost">VIEW POST</a>
+                    <br>
             </div>
     </div>
 

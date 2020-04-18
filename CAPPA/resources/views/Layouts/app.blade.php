@@ -24,63 +24,124 @@
         <script src="/CSS/js/uikit-icons.min.js"></script>
 </head>
 <body>
-  
-<nav class="uk-navbar-container uk-visible@l" id="NAV_BG" uk-navbar>
+        <!-- Mobile Nav -->
+        <nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@m" id="moblie-nav" uk-sticky uk-scroll uk-navbar>
+            <div class="uk-navbar-center">
+               <img src="/img/logo.png" width="150px" alt="CAPPA_LOGO">
+            </div>
+              
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"  uk-toggle="target: #offcanvas-usage"></a>
+            </div>
 
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-               <li>
-                   <a class="" href="{{ url('/') }}">
-                       <img src="/img/logo.png" width="175px" alt="CAPPA_LOGO">
-                    </a>
-                </li>
-            </ul>
+            <div id="offcanvas-usage"uk-offcanvas>
+                <div class="uk-offcanvas-bar" id="sidenav" >
 
-        </div>
-        <div class="uk-navbar-right">
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                    <br><br>
 
-            <ul class="uk-navbar-nav">
-              @guest
-                    <li>
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-active">
+                                <a  href="/">HOME</a>
                         </li>
-                    @endif
-                       @else
-                       <li>
-                          <a>{{ Auth::user()->name }} <span></span></a>
+                        <li class="uk-active">
+                                <a   href="/CrimePost">BLOG</a>
+                        </li>
 
-                           <div>
-                                   <li class="uk-active">
-                                        <a  href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
+                        <br>
+                        <li class="uk-nav-divider"></li>
+                        <br>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </li>
-                            </div>
-                       </li>
-                @endguest
-            </ul>
+                        @guest
+                            <li  class="uk-active">
+                                 <a href="{{ route('login') }}">{{ __('Login') }}</a> 
+                            </li>
+
+                            @if (Route::has('register'))
+                                <li  class="uk-active">
+                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                            <li>
+                                <a>{{ Auth::user()->name }} <span></span></a>
+
+                                <div>
+                                        <li class="uk-active">
+                                                <a  href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                    </div>
+                            </li>
+                        @endguest
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </nav>
+        <!-- Mobile Nav -->
+        
+        <!-- Desktop Nav -->
+        <nav class="uk-navbar-container uk-visible@l" id="NAV_BG" uk-navbar>
+
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="{{ url('/') }}">
+                            <img src="/img/logo.png" width="175px" alt="CAPPA_LOGO">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="uk-navbar-right">
+
+                    <ul class="uk-navbar-nav">
+                    @guest
+                            <li>
+                                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                            <li>
+                                <a>{{ Auth::user()->name }} <span></span></a>
+
+                                <div>
+                                        <li class="uk-active">
+                                                <a  href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                    </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+        </nav>
+        <!-- Desktop Nav -->
+
+        <div>
+        @yield('content')    
         </div>
-</nav>
-
-<nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@s">
-    <div class="uk-navbar-left">
-        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"></a>
-    </div>
-</nav>
-
-    <div>
-    @yield('content')    
-    </div>
 </body>
 </html>

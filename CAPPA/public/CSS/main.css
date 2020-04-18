@@ -257,5 +257,160 @@
 }
 
 .card1 {
-    border-radius: 6rem;
+    border-radius: 10px;
+}
+
+#moblie-nav {
+    background: #34495e;
+}
+
+#sidenav {
+    background: #34495e;
+}
+
+.welcome-btn-mobile {
+    margin-left: 4rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    border: none;
+    background-color: #f39c12;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.wel-panel {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+#wel-msg-mobile {
+    margin-left: 0.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 52px;
+    color: #2c3e50;
+}
+
+#wel-msg-mobile2 {
+    margin-left: 6rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    color: #2c3e50;
+}
+
+#wel-msg-mobile3 {
+    margin-left: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    color: #2c3e50;
+}
+
+#wel-msg-mobile4 {
+    margin-left: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #16a085;
+}
+
+.wel-bg {
+    background: linear-gradient(#43cea2, #185a9d);
+}
+
+.mobile-panel {
+    margin: 2rem;
+}
+
+.mobilebox2 {
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 6px 12px#e74c3c;
+}
+
+.post-btn-container-mobile {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.post-btn-mobile {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    border: none;
+    background-color: #2ecc71;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.box-mobile {
+    background-color: #f1f2f6;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 8px 16px#2980B9;
+}
+
+.txt-mobile {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #16a085;
+}
+
+.btn-mobile {
+    border-radius: 8px;
+    border: none;
+    background-color: #686de0;
+    color: white;
+    font-size: small;
+}
+
+.fromPanel-mobile {
+    margin: 0rem 2rem 2rem 2rem;
+    padding-top: 3.5rem;
+}
+
+.btn2-2-mobile {
+    border-radius: 8px;
+    border: none;
+    background-color: #2ecc71;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+.btn2-3-mobile {
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #f1c40f;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.rpanel {
+    margin: 1.5rem;
+}
+
+.container2-mobile {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.box3-mobile {
+    background-color: #f1f2f6;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 8px 16px#2980B9;
+}
+
+.box2--mobile {
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 8px 16px#e74c3c;
 }
