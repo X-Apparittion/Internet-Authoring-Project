@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<!DOCTYPE html>
 <div id="bg">
         <!-- Desktop view-->
             <div class="uk-container-large panel uk-visible@l">
@@ -14,7 +15,7 @@
                                     <!--Map Styling -->
                                     <style>
                                         #map{
-                                            height: 400px;
+                                            height: 300px;
                                             width: 100%;
                                         }
                                     </style>
@@ -26,17 +27,23 @@
                                     <script>
                                         function initMap() {
                                             var options = {
-                                                zoom: 8,
+                                                zoom: 15,
                                                 center: {lat:18.014115,lng:-77.501873}
                                             }
 
                                             var map = new google.maps.Map(document.getElementById('map'), options);
+
+                                            //Marker
+                                            var marker = new google.maps.Marker({
+                                                position:{lat:18.014115,lng:-77.501873},
+                                                map:map
+                                            })
                                         }
                                     </script>
 
                                     <!--API Key Placement-->
-                                    <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI1O_SUM_faILxAVa2bVJp8NPBTPjBHq0&callback=initMap">
+                                    <script 
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI1O_SUM_faILxAVa2bVJp8NPBTPjBHq0&callback=initMap" async defer>
                                     </script>
 
 
