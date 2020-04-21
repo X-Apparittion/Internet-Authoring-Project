@@ -23,6 +23,8 @@ Route::get('/CrimePost/{id}', 'CrimePostController@ShowPostByID')->middleware('a
 
 Route::post('/CrimePost','CrimePostController@SavePost')->middleware('auth');
 
+Route::post('/Update/{id}','CrimePostController@EditPost');
+
 
 Auth::routes();
 

@@ -30,8 +30,10 @@
                <img src="/img/logo.png" width="150px" alt="CAPPA_LOGO">
             </div>
               
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"  uk-toggle="target: #offcanvas-usage"></a>
+            <div class="uk-navbar-left" >
+                <a class="uk-navbar-toggle uk-active" id="#bg4"  href="#"  uk-toggle="target: #offcanvas-usage">
+                    <span  uk-navbar-toggle-icon></span>
+                </a>
             </div>
 
             <div id="offcanvas-usage"uk-offcanvas>
@@ -40,12 +42,13 @@
                     <button class="uk-offcanvas-close" type="button" uk-close></button>
                     <br><br>
 
-                    <ul class="uk-nav uk-nav-default">
+                   <nav>
+                   <ul class="uk-nav uk-nav-default">
                         <li class="uk-active">
-                                <a  href="/">HOME</a>
+                                <a  href="{{ url('/') }}">HOME</a>
                         </li>
                         <li class="uk-active">
-                                <a   href="/CrimePost">BLOG</a>
+                                <a  href="{{ url('CrimePost') }}">BLOG</a>
                         </li>
 
                         <br>
@@ -82,6 +85,7 @@
                             </li>
                         @endguest
                     </ul>
+                   </nav>
 
 
                 </div>

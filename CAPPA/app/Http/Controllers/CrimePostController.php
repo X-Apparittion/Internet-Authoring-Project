@@ -43,6 +43,20 @@ class CrimePostController extends Controller
    
       $record->save();
 
-     return redirect('/CrimePost')->with('msg','Posts updated.');
+     return redirect('/CrimePost')->with('msg','Posts created');
   }
+
+  public function EditPost($id){
+
+     $record = Crimeinfo::findOrFail($id);
+
+     $record->title = request('title');
+     $record->place = request('place');
+     $record->post  = request('post');
+  
+     $record->update();
+
+    return redirect('/CrimePost')->with('msg','Posts updated.');
+  }
+
 }
