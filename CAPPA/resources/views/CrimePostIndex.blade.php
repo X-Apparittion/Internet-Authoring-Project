@@ -114,16 +114,21 @@
                                     <script>
                                         function initMap() {
                                             var options = {
-                                                zoom: 10,
-                                                center: {lat:18.014115,lng:-77.501873}
-                                            }
+                                                zoom: 15,
+                                                center: {lat:17.9979389,lng:-76.7807113}
+                                            },
 
                                             var map = new google.maps.Map(document.getElementById('map'), options);
 
                                             //Marker
-                                            var marker = new google.maps.Marker({
-                                                position:{lat:18.014115,lng:-77.501873},
-                                                map:map
+                                            var marker = new google.maps.Marker({                               
+                                                for(i = 0; i< count($latitudes);i++) {
+                                                    position:{<?php echo'lat:'. $latitudes[i] .', lng:'. $longitudes[i] ;?>},
+
+                                                     map:map
+                                                } 
+                                         
+                                               
                                             })
                                         }
                                     </script>
@@ -132,10 +137,6 @@
                                     <script 
                                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI1O_SUM_faILxAVa2bVJp8NPBTPjBHq0&callback=initMap" async defer>
                                     </script>
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -209,4 +210,21 @@
       </div>
       <!-- fotter -->
 </div>
+
+<?php
+	// Select all the rows in the markers table
+	$query = "SELECT  `lat`, `lng` FROM `markers` ";
+	$result = $mysqli->query($query) or die('data selection for google map failed: ' . $mysqli->error);
+
+ 	while ($row = mysqli_fetch_array($result)) {
+
+		$latitudes[] = $row['lat'];
+		$longitudes[] = $row['lng'];
+		$coordinates[] = 'new google.maps.LatLng(' . $row['lat'] .','. $row['lng'] .'),';
+	}
+
+	//remove the comaa ',' from last coordinate
+	$lastcount = count($coordinates)-1;
+	$coordinates[$lastcount] = trim($coordinates[$lastcount], ",");	
+?>
 @endsection
