@@ -27,7 +27,7 @@
                                     <script>
                                         function initMap() {
                                             var options = {
-                                                zoom: 15,
+                                                zoom: 25, 
                                                 center: {lat:18.014115,lng:-77.501873}
                                             }
 
@@ -54,9 +54,9 @@
                         </div>
 
                     <br>
-                    <h2 class="headeer">Daliy Activities</h2>
+                    <h2 id="txt">Daliy Activities</h2>
                     <br>
-                    <h3 class="headeer"> {{ session('msg') }}</h3>
+                    <h3  id="txt"> {{ session('msg') }}</h3>
                     <p class="post-btn-container" uk-margin>
                         <a class="uk-button uk-button-default post-btn" href="/CrimePost/create">
                             CREATE POST ...  <img src="/img/arrow.png" alt="">
@@ -140,9 +140,9 @@
                             </div>
                         </div>
 
-            <h2>Daliy Activities</h2>
+            <h2 id="txt">Daliy Activities</h2>
 
-                    <h3> {{ session('msg') }}</h3>
+                    <h3 id="txt"> {{ session('msg') }}</h3>
 
                     <p class="post-btn-container-mobile" uk-margin>
                         <a class="uk-button uk-button-default post-btn-mobile" href="/CrimePost/create">CREATE POST !</a>
@@ -157,10 +157,10 @@
                                 <img src="/img/siren.png" alt="">
                                 <h3 class="uk-card-title">{{ $CrimePost->title }}</h3>
                                 </span>
-                                <p class="txt-mobile"> {{ $CrimePost->post }} At the location of {{$CrimePost->place}}</p>
+                                <p class="txt-mobile"> {{ $CrimePost->post }}, at the location of ;{{$CrimePost->place}}</p>
 
                                 <p uk-margin>
-                                    <a class="uk-button uk-button-default btn-mobile" href="/CrimePost/{{$CrimePost->id}}" >View</a>
+                                    <a class="uk-button uk-button-default btn-mobile" href="/CrimePost/{{$CrimePost->id}}" >EDIT</a>
                                 </p>
 
                             </div>
