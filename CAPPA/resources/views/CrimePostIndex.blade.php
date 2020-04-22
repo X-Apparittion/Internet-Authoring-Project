@@ -122,13 +122,10 @@
 
                                             //Marker
                                             var marker = new google.maps.Marker({                               
-                                                for(i = 0; i< count($latitudes);i++) {
+                                                for(a = 0; a < count($latitudes);a++) {
                                                     position:{<?php echo'lat:'. $latitudes[i] .', lng:'. $longitudes[i] ;?>},
-
                                                      map:map
-                                                } 
-                                         
-                                               
+                                                }                                          
                                             })
                                         }
                                     </script>
