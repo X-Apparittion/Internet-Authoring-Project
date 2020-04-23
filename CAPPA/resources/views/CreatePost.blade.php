@@ -16,14 +16,12 @@
                    <input class="uk-input" id="form-stacked-text" type="text" name='title' placeholder="Please give a title for your post">
                </div>
           </div>
-
+           <br>
           <div class="uk-margin">
-              <label class="uk-form-label"  id="lablel" for="form-stacked-text">LOCATION</label>
-               <div class="uk-form-controls">
-                   <input class="uk-input" id="form-stacked-text" type="text" name="place" placeholder="Please state the location">
-               </div>
+              <label class="uk-form-label"  id="lablel" for="form-stacked-text">Please select your Location</label>
+              <input class="uk-input" id="form-stacked-text" type="text" name='place' placeholder="Please give the loactiom">
           </div>
-
+           <br>
           <div class="uk-margin">
               <label class="uk-form-label"  id="lablel" for="form-stacked-text">POST</label>
                <div class="uk-form-controls">
@@ -42,7 +40,7 @@
 
 
     <!-- Mobile View-->
-    <div class="uk-container-small fromPanel-mobile uk-hidden@s">
+    <div class="uk-container-small fromPanel-mobile uk-hidden@m">
         <span>
           <img src="/img/pen.png" alt="Create Post">
         </span>

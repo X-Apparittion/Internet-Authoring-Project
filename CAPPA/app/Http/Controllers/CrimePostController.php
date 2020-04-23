@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Crimeinfo;
+use App\User;
 
 
 class CrimePostController extends Controller

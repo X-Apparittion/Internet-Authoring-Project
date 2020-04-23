@@ -7,10 +7,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CAPPA') }}</title>
+    <title>CAPPAA</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> 
+  
 
     <!-- Fonts -->
     <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">-->
@@ -25,7 +29,7 @@
 </head>
 <body>
         <!-- Mobile Nav -->
-        <nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@m" id="moblie-nav" uk-sticky uk-scroll uk-navbar>
+        <nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@m" id="moblie-nav" uk-sticky>
             <div class="uk-navbar-center">
                <img src="/img/logo.png" width="150px" alt="CAPPA_LOGO">
             </div>
@@ -42,13 +46,15 @@
                     <button class="uk-offcanvas-close" type="button" uk-close></button>
                     <br><br>
 
-                   <nav>
+                   <br><br>
                    <ul class="uk-nav uk-nav-default">
-                        <li class="uk-active">
-                                <a  href="{{ url('/') }}">HOME</a>
+
+                        <li>
+                                <a  href="{{ URL::to('/') }}">HOME</a>
                         </li>
+
                         <li class="uk-active">
-                                <a  href="{{ url('CrimePost') }}">BLOG</a>
+                                <a  href="{{ url('/CrimePost') }}">BLOG</a>
                         </li>
 
                         <br>
@@ -57,7 +63,7 @@
 
                         @guest
                             <li  class="uk-active">
-                                 <a href="{{ route('login') }}">{{ __('Login') }}</a> 
+                                 <a href="{{ url('/login') }}">{{ __('Login') }}</a> 
                             </li>
 
                             @if (Route::has('register'))
@@ -85,7 +91,7 @@
                             </li>
                         @endguest
                     </ul>
-                   </nav>
+            
 
 
                 </div>

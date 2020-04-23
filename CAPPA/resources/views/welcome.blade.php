@@ -2,21 +2,26 @@
 
 @section('content')
    <div id="bg3">
-    <br><br><br><br>
-   <div class="container-large Welcome-panel uk-visible@l">
-            <div class="Welcome-panel2">
-                    <center>
-                        <img src="/img/security.png" width="150px" alt="">
-                    </center>
-                    <p id="wel-head-txt"> WELCOME TO CAPPA</p>
-                    <p id="wel-txt">
-                        Crime and Prevention and Predictive Analysis Application C.A.P.P.A.A
-                    </p>
-                    <a class="uk-button uk-button-default welcome-btn" href="/CrimePost">VIEW POST</a>
-            </div>
-    </div>
 
-    <div class="container-large uk-hidden@s">
+    <br><br><br><br>
+      <!-- Desktop View --> 
+       <div class="container-large Welcome-panel uk-visible@l">
+                <div class="Welcome-panel2">
+                        <center>
+                            <img src="/img/security.png" width="150px" alt="">
+                        </center>
+                        <p id="wel-head-txt"> WELCOME TO CAPPA</p>
+                        <p id="wel-txt">
+                            Crime and Prevention and Predictive Analysis Application C.A.P.P.A.A
+                        </p>
+                        <a class="uk-button uk-button-default welcome-btn" href="/CrimePost">VIEW POST</a>
+                </div>
+        </div>
+      <!-- Desktop View --> 
+
+
+     <!-- Mobile View --> 
+    <div class="container-large uk-hidden@m">
             <div class="wel-panel">
                     <p id="wel-msg-mobile">WELCOME</p>
                     <p id="wel-msg-mobile2">TO</p>
@@ -33,7 +38,11 @@
                     
             </div>
     </div>
+      <!-- Mobile View --> 
+
+
     <br><br><br>
+    <!-- footer --> 
     <div class="uk-section uk-section-muted footer-background">
             <div class="uk-container">
 
@@ -69,6 +78,7 @@
         </footer>
         
     </div>
+    <!-- footer --> 
 
    </div>
 @endsection

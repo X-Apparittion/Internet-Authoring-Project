@@ -31,7 +31,7 @@
 </div>
 
 
-  <div class="uk-hidden@s conbox">
+  <div class="uk-hidden@m conbox">
     <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m card1">
         <h3 class="uk-card-title">Dashboard</h3> 
         @if (session('status'))

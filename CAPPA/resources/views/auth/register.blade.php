@@ -4,7 +4,7 @@
 <div>
 
     <!-- Mobile view -->
-    <div class="uk-hidden@s rpanel">
+    <div class="uk-hidden@m rpanel">
         <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
             <div class="uk-card-header"> 
                 <h2> Register</h2>

@@ -5,10 +5,11 @@
    
         <!-- Desktop view -->
         <div class="uk-container-large edit-panel uk-visible@l">
-        
+         
             <form class="uk-form-horizontal uk-margin-large" action="/Update/{{$CrimePosts->id}}" method="POST">
             @csrf
             <br>
+            <img id="eimg" src="/img/data.png" alt="">
                 <div class="uk-margin">
                     <label class="uk-form-label" id="lablel" for="form-horizontal-text">TITLE</label>
                     <div class="uk-form-controls">
@@ -37,11 +38,12 @@
         <!-- Desktop view -->
 
         <!-- Mobile view -->
-        <div class="uk-container-small edit-panel-mobile uk-hidden@s">
+        <div class="uk-container-small edit-panel-mobile uk-hidden@m">
         
             <form class="uk-form-horizontal uk-margin-large" action="/Update/{{$CrimePosts->id}}" method="POST">
             @csrf
             <br>
+            <img id="eimg1" src="/img/data.png" alt="">
                 <div class="uk-margin">
                     <label class="uk-form-label" id="lablel" for="form-horizontal-text">TITLE</label>
                     <div class="uk-form-controls">

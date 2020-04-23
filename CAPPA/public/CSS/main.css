@@ -280,7 +280,7 @@
     }
     
     .welcome-btn-mobile {
-        margin-left: 4rem;
+        margin-left: 5rem;
         font-family: 'Roboto', sans-serif;
         border-radius: 10px;
         border: none;
@@ -452,4 +452,12 @@
     
     #txt {
         color: #2980b9;
+    }
+    
+    #eimg {
+        padding-left: 13rem;
+    }
+    
+    #eimg1 {
+        padding-left: 6rem;
     }
